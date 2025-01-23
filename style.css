@@ -11,27 +11,58 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    background-color: rgb(255, 189, 189);
+    background-color: rgb(255, 151, 151);
   }
 
 body {
     font-family: 'Ownglyph_StudyHard-Rg';
 }
 
+.nav_bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav_bar ul{
+    display: flex;
+  }
+  
+  .nav_bar ul li {
+    font-family: 'Ownglyph_StudyHard-Rg';
+  }
+  
+  .nav_bar ul li a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 30px;
+    position: relative;
+    padding: 30px 25px;
+    transition: 0.2s;
+  }
+  .nav_bar ul li a:hover{
+    color: #ffffff;
+  }
+  .nav_bar ul li a.active{
+    color: #ffffff;
+  }
+
 .intro {
     display: block;
     text-align: center;
     justify-content: center;
     align-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     background-color: rgb(255, 151, 151);
 }
 
 #intro-picture {
     width: 500px;
     height: 500px;
-    margin-top: 60px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     border-radius: 15%;
 }
 
@@ -56,7 +87,7 @@ span {
     text-align: center;
 }
 
-.about img {
+#about img {
     width: 400px;
     height: 400px;
     margin: 40px;
@@ -82,7 +113,7 @@ span {
     background-color: aliceblue;
 }
 
-.plans {
+#plans {
     width: 100%;
     height: 100%;
     padding-bottom: 60px;
@@ -101,14 +132,30 @@ span {
 .plist {
     background-color: aliceblue;
     padding-bottom: 20px;
+    justify-content: center;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 768px) {
+
     #intro-picture {
-      width: 400px;
-      height: 400px;
+        width: 90%;
+        padding: 20px;
     }
+
     .about-container {
         flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
-  }
+
+    .about-tab {
+        flex: 1;
+    }
+
+    .about-container p{
+        padding: 20px 20px 10px 20px;
+        text-align: center;
+    }
+
+}
